@@ -1,4 +1,8 @@
 let mix = require('laravel-mix');
 
 mix.js('src/js/app.js', 'assets')
-   .sass('src/scss/app.scss', 'assets');
+   .sass('src/scss/app.scss', 'assets')
+   .autoload({
+      jquery: ['$', 'window.jQuery']
+   });
+

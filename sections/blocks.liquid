@@ -1,6 +1,17 @@
 {% for block in section.blocks %}
-  <img src="{{ block.settings.image | img_url: 'large' }}"/>
+  <img src="{{ block.settings.image | img_url: '300x200' }}"/>
 {% endfor %} 
+
+<button style=" 
+  padding: 10px 20px; 
+  background: blue; 
+  color: white; 
+  border: 1px black solid;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;" 
+  class="alert">Alert
+</button>
 
 {% schema %}
 {
@@ -20,8 +31,8 @@
               ],
   "presets": [
       {
-        "category": "TEST",
-        "name": "TEST PRESET"
+        "category": "Images",
+        "name": "Image blocks"
       }
     ]
 }
