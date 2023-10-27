@@ -1,5 +1,6 @@
 /* component-button */
 /* Button - default */
+
 .button--secondary,
 .button--tertiary {
   --color-button: var(--color-secondary-button);
@@ -15,8 +16,8 @@
 .shopify-challenge__button,
 .customer button,
 button.shopify-payment-button__button--unbranded,
-.shopify-payment-button [role=button],
-.cart__dynamic-checkout-buttons [role=button],
+.shopify-payment-button [role='button'],
+.cart__dynamic-checkout-buttons [role='button'],
 .cart__dynamic-checkout-buttons iframe {
   --shadow-horizontal-offset: var(--buttons-shadow-horizontal-offset);
   --shadow-vertical-offset: var(--buttons-shadow-vertical-offset);
@@ -42,7 +43,8 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .cart__dynamic-checkout-buttons iframe {
-  box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
+  box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius)
+    rgba(var(--color-shadow), var(--shadow-opacity));
 }
 
 .button,
@@ -60,8 +62,7 @@ button.shopify-payment-button__button--unbranded {
   color: rgb(var(--color-button-text));
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   background-color: rgba(var(--color-button), var(--alpha-button-background));
 }
 
@@ -69,9 +70,9 @@ button.shopify-payment-button__button--unbranded {
 .shopify-challenge__button:before,
 .customer button:before,
 .shopify-payment-button__button--unbranded:before,
-.shopify-payment-button [role=button]:before,
-.cart__dynamic-checkout-buttons [role=button]:before {
-  content: "";
+.shopify-payment-button [role='button']:before,
+.cart__dynamic-checkout-buttons [role='button']:before {
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -79,14 +80,15 @@ button.shopify-payment-button__button--unbranded {
   left: 0;
   z-index: -1;
   border-radius: var(--buttons-radius-outset);
-  box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
+  box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius)
+    rgba(var(--color-shadow), var(--shadow-opacity));
 }
 
 .button:after,
 .shopify-challenge__button:after,
 .customer button:after,
 .shopify-payment-button__button--unbranded:after {
-  content: "";
+  content: '';
   position: absolute;
   top: var(--buttons-border-width);
   right: var(--buttons-border-width);
@@ -94,7 +96,9 @@ button.shopify-payment-button__button--unbranded {
   left: var(--buttons-border-width);
   z-index: 1;
   border-radius: var(--buttons-radius);
-  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
+  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
+      rgba(var(--color-button-text), var(--border-opacity)),
+    0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
   transition: box-shadow var(--duration-short) ease;
 }
 
@@ -103,7 +107,9 @@ button.shopify-payment-button__button--unbranded {
 .customer button:hover::after,
 .shopify-payment-button__button--unbranded:hover::after {
   --border-offset: 1.3px;
-  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
+      rgba(var(--color-button-text), var(--border-opacity)),
+    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
 }
 
 .button--secondary:after {
@@ -114,21 +120,18 @@ button.shopify-payment-button__button--unbranded {
 .button:focus,
 .button.focused,
 .shopify-payment-button__button--unbranded:focus-visible,
-.shopify-payment-button [role=button]:focus-visible,
+.shopify-payment-button [role='button']:focus-visible,
 .shopify-payment-button__button--unbranded:focus,
-.shopify-payment-button [role=button]:focus {
+.shopify-payment-button [role='button']:focus {
   outline: 0;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0 0.5rem rgba(var(--color-foreground), 0.5), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0 0.5rem rgba(var(--color-foreground), 0.5),
+    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 .button:focus:not(:focus-visible):not(.focused),
 .shopify-payment-button__button--unbranded:focus:not(:focus-visible):not(.focused),
-.shopify-payment-button [role=button]:focus:not(:focus-visible):not(.focused) {
+.shopify-payment-button [role='button']:focus:not(:focus-visible):not(.focused) {
   box-shadow: inherit;
-}
-
-.button::-moz-selection, .shopify-challenge__button::-moz-selection, .customer button::-moz-selection {
-  background-color: rgba(var(--color-button-text), 0.3);
 }
 
 .button::selection,
@@ -158,11 +161,12 @@ button.shopify-payment-button__button--unbranded {
 }
 
 /* Button - other */
+
 .button:disabled,
-.button[aria-disabled=true],
+.button[aria-disabled='true'],
 .button.disabled,
 .customer button:disabled,
-.customer button[aria-disabled=true],
+.customer button[aria-disabled='true'],
 .customer button.disabled,
 .quantity__button.disabled {
   cursor: not-allowed;
@@ -184,6 +188,7 @@ button.shopify-payment-button__button--unbranded {
     color: rgb(var(--color-foreground));
   }
 }
+
 .button.loading > .loading-overlay__spinner {
   top: 50%;
   left: 50%;
@@ -195,7 +200,6 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .button.loading > .loading-overlay__spinner .spinner {
-  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -204,13 +208,13 @@ button.shopify-payment-button__button--unbranded {
 }
 
 /* Button - social share */
+
 .share-button {
   display: block;
   position: relative;
 }
 
 .share-button details {
-  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -254,7 +258,6 @@ details[open] > .share-button__fallback {
   left: 0.1rem;
   z-index: 3;
   width: 100%;
-  min-width: -moz-max-content;
   min-width: max-content;
   border-radius: var(--inputs-radius);
   border: 0;
@@ -262,7 +265,7 @@ details[open] > .share-button__fallback {
 
 .share-button__fallback:after {
   pointer-events: none;
-  content: "";
+  content: '';
   position: absolute;
   top: var(--inputs-border-width);
   right: var(--inputs-border-width);
@@ -278,14 +281,15 @@ details[open] > .share-button__fallback {
 .share-button__fallback:before {
   background: rgb(var(--color-background));
   pointer-events: none;
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   border-radius: var(--inputs-radius-outset);
-  box-shadow: var(--inputs-shadow-horizontal-offset) var(--inputs-shadow-vertical-offset) var(--inputs-shadow-blur-radius) rgba(var(--color-shadow), var(--inputs-shadow-opacity));
+  box-shadow: var(--inputs-shadow-horizontal-offset) var(--inputs-shadow-vertical-offset)
+    var(--inputs-shadow-blur-radius) rgba(var(--color-shadow), var(--inputs-shadow-opacity));
   z-index: -1;
 }
 
@@ -386,8 +390,4 @@ details[open] > .share-button__fallback {
 
 .share-button__message:not(:empty):not(.hidden) ~ * {
   display: none;
-}
-
-* {
-  box-sizing: border-box;
 }
