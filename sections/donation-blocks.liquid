@@ -1,25 +1,16 @@
-{% for block in section.blocks %}
-  <img src="{{ block.settings.image | img_url: '300x200' }}"/>
-{% endfor %} 
-
-<button style=" 
-  padding: 10px 20px; 
-  background: blue; 
-  color: white; 
-  border: 1px black solid;
-  display: block;
-  margin: auto;
-  margin-bottom: 10px;" 
-  class="alert">Alert
-</button>
+<section class="donation-blocks">
+  {% for block in section.blocks %}
+    <img src="{{ block.settings.image | img_url: '300x200' }}"/>
+  {% endfor %} 
+</section>
 
 {% schema %}
 {
-  "name" : "Image block",
+  "name" : "Donation blocks",
   "blocks" : [
                 {
-                  "type" : "image",
-                  "name" : "Image block",
+                  "type" : "Donations",
+                  "name" : "Donation block",
                   "settings" : [
                                   {
                                   "type" : "image_picker",
@@ -32,8 +23,14 @@
   "presets": [
       {
         "category": "Images",
-        "name": "Image blocks"
+        "name": "Donation blocks"
       }
     ]
 }
 {% endschema %}
+
+<style>
+.donation-blocks {
+  margin-left: 100px;
+}
+</style>
