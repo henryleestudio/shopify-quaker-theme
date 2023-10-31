@@ -1,0 +1,36 @@
+<section class="donation-blocks">
+  {% for block in section.blocks %}
+    <img src="{{ block.settings.image | img_url: '300x200' }}"/>
+  {% endfor %} 
+</section>
+
+{% schema %}
+{
+  "name" : "Donation blocks",
+  "blocks" : [
+                {
+                  "type" : "Donations",
+                  "name" : "Donation block",
+                  "settings" : [
+                                  {
+                                  "type" : "image_picker",
+                                  "id" : "image",
+                                  "label" : "Choose a custom image"
+                                  }
+                                ]
+                }
+              ],
+  "presets": [
+      {
+        "category": "Images",
+        "name": "Donation blocks"
+      }
+    ]
+}
+{% endschema %}
+
+<style>
+.donation-blocks {
+  margin-left: 100px;
+}
+</style>

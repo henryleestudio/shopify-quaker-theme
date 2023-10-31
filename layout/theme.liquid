@@ -28,9 +28,6 @@
 
     {% render 'meta-tags' %}
 
-    <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
@@ -237,6 +234,7 @@
       }
     {% endstyle %}
 
+    {{ 'app.css' |  asset_url |  stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
@@ -278,6 +276,8 @@
     {%- endif -%}
 
     {% sections 'header-group' %}
+
+    {% sections 'blocks' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
@@ -334,5 +334,7 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    <script src="../assets/app.js"></script>
   </body>
 </html>
